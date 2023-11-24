@@ -117,5 +117,5 @@ if ! shopt -oq posix; then
 fi
 
 # test
-export PATH=$PATH:$HOME/.local/bin
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias w="nitrogen --set-zoom-fill --random ~/Pictures"
