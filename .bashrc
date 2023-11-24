@@ -119,3 +119,5 @@ fi
 # test
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias w="nitrogen --set-zoom-fill --random ~/Pictures"
+
+eval "$(starship init bash)"
