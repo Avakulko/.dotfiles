@@ -116,8 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# test
+# turn on prompt vim mode
 set -o vi
+
+# enable fzf keybindings and  completion
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias w="nitrogen --set-zoom-fill --random ~/Pictures"
 alias rukeys="setxkbmap -layout us,ru -option grp:win_space_toggle"
