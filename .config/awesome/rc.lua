@@ -406,7 +406,7 @@ clientkeys = gears.table.join(
     --         c.minimized = true
     --     end ,
     --     {description = "minimize", group = "client"}),
-    awful.key({ modkey,           }, "r",
+    awful.key({ modkey, "Control" }, "x",
         function (c)
             c.maximized = not c.maximized
             c:raise()
@@ -567,7 +567,8 @@ awful.rules.rules = {
     },
     -- MY RULES
     -- {rule = {class="", name=""}, properties={floating=true, tag=""}},
-    {rule = {class="TelegramDesktop"}, properties={floating=true, tag="3", switch_to_tags=true}},
+    {rule = {class="Google-chrome"}, properties={tag="3", switch_to_tags=true}},
+    {rule = {class="TelegramDesktop"}, properties={tag="4", switch_to_tags=true}},
 
     -- {rule = {class="kitty", name="kitty"}},
 
