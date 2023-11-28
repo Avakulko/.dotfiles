@@ -117,8 +117,9 @@ if ! shopt -oq posix; then
 fi
 
 # test
+set -o vi
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias w="nitrogen --set-zoom-fill --random ~/Pictures"
+alias rukeys="setxkbmap -layout us,ru -option grp:win_space_toggle"
 
 eval "$(starship init bash)"
-set -o vi
