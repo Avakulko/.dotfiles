@@ -329,11 +329,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "r", function() awful.util.spawn("dmenu_run") end,
         { description = "launch dmenu", group = "launcher" }),
     awful.key({ modkey }, "b", function() awful.util.spawn("google-chrome") end,
-        { description = "Launch Google Chrome", group = "launcher" }),
+        { description = "launch Google Chrome", group = "launcher" }),
     awful.key({ modkey }, "t", function() awful.util.spawn("telegram-desktop") end,
         { description = "launch Telegram", group = "launcher" }),
     awful.key({ modkey }, "o", function() awful.util.spawn("obsidian") end,
-        { description = "launch Obsidian", group = "launcher" })
+        { description = "launch Obsidian", group = "launcher" }),
+    awful.key({ modkey }, "c", function() awful.util.spawn("flameshot gui") end,
+        { description = "launch Flameshot", group = "launcher" })
 )
 
 clientkeys = gears.table.join(
@@ -580,9 +582,9 @@ awful.rules.rules = {
     },
     -- MY RULES
     -- {rule = {class="", name=""}, properties={floating=true, tag=""}},
-    { rule = { class = "Google-chrome" }, properties = { tag = "3", switch_to_tags = true } },
+    { rule = { class = "Google-chrome" },   properties = { tag = "3", switch_to_tags = true } },
     { rule = { class = "TelegramDesktop" }, properties = { tag = "4", switch_to_tags = true } },
-    { rule = { class = "obsidian" },    properties = { tag = "5", switch_to_tags = true } },
+    { rule = { class = "obsidian" },        properties = { tag = "5", switch_to_tags = true } },
 
     -- {rule = {class="kitty", name="kitty"}},
 
@@ -590,7 +592,7 @@ awful.rules.rules = {
     {
         rule_any = {
             instance = {
-                "DTA", -- Firefox addon DownThemAll.
+                "DTA",   -- Firefox addon DownThemAll.
                 "copyq", -- Includes session name in class.
                 "pinentry",
             },
@@ -599,7 +601,7 @@ awful.rules.rules = {
                 "Blueman-manager",
                 "Gpick",
                 "Kruler",
-                "MessageWin", -- kalarm.
+                "MessageWin",  -- kalarm.
                 "Sxiv",
                 "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
                 "Wpa_gui",
@@ -612,9 +614,9 @@ awful.rules.rules = {
                 "Event Tester", -- xev.
             },
             role = {
-                "AlarmWindow", -- Thunderbird's calendar.
+                "AlarmWindow",   -- Thunderbird's calendar.
                 "ConfigManager", -- Thunderbird's about:config.
-                "pop-up",    -- e.g. Google Chrome's (detached) Developer Tools.
+                "pop-up",        -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
         properties = { floating = true }
